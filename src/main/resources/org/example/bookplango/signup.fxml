@@ -14,38 +14,44 @@
             <Font name="Calibri Bold" size="26.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="64.0" layoutY="124.0" text="Phone/Email">
+      <Label alignment="CENTER" layoutX="61.0" layoutY="158.0" text="Phone/Email">
          <font>
             <Font name="Calibri Bold" size="23.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="75.0" layoutY="164.0" text="Username">
+      <Label alignment="CENTER" layoutX="72.0" layoutY="194.0" text="Username">
          <font>
             <Font name="Calibri Bold" size="23.0" />
          </font>
       </Label>
-      <TextField fx:id="phone_email_Text" layoutX="222.0" layoutY="123.0" prefHeight="25.0" prefWidth="190.0" promptText="Phone/Email" style="-fx-border-color: #0d0dff;" />
-      <TextField fx:id="username_Text" layoutX="222.0" layoutY="165.0" prefHeight="25.0" prefWidth="190.0" promptText="Username" style="-fx-border-color: #0d0dff;" />
-      <Label alignment="CENTER" layoutX="75.0" layoutY="205.0" text="Password">
+      <TextField fx:id="phone_email_Text" layoutX="219.0" layoutY="157.0" prefHeight="25.0" prefWidth="190.0" promptText="Phone/Email" style="-fx-border-color: #0d0dff;" />
+      <TextField fx:id="username_Text" layoutX="219.0" layoutY="195.0" prefHeight="25.0" prefWidth="190.0" promptText="Username" style="-fx-border-color: #0d0dff;" />
+      <Label alignment="CENTER" layoutX="77.0" layoutY="236.0" text="Password">
          <font>
             <Font name="Calibri Bold" size="23.0" />
          </font>
       </Label>
-      <Button alignment="CENTER" layoutX="176.0" layoutY="287.0" mnemonicParsing="false" onAction="#onsignupButtonclick" prefHeight="34.0" prefWidth="124.0" style="-fx-border-color: #0d0dff;" text="Sign up">
+      <Button alignment="CENTER" layoutX="176.0" layoutY="299.0" mnemonicParsing="false" onAction="#useronsignupButtonclick" prefHeight="34.0" prefWidth="124.0" style="-fx-border-color: #0d0dff;" text="Sign up">
          <font>
             <Font name="Calibri Bold" size="18.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchtoSigninScene" style="-fx-background-color: #a61247;" text="Back" textFill="#fffafa">
+      <Button alignment="CENTER" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchtouserSigninScene" style="-fx-background-color: #a61247;" text="Back" textFill="#fffafa">
          <font>
             <Font name="Calibri Bold" size="11.0" />
          </font>
       </Button>
-      <PasswordField fx:id="password_text" layoutX="222.0" layoutY="206.0" prefHeight="25.0" prefWidth="190.0" promptText="Password" style="-fx-border-color: #0d0dff;" />
-      <Label fx:id="userlogin_label" alignment="CENTER" layoutX="40.0" layoutY="348.0" prefHeight="22.0" prefWidth="395.0" textFill="WHITE">
+      <PasswordField fx:id="password_text" layoutX="219.0" layoutY="236.0" prefHeight="25.0" prefWidth="190.0" promptText="Password" style="-fx-border-color: #0d0dff;" />
+      <Label fx:id="userlogin_label" alignment="CENTER" layoutX="41.0" layoutY="362.0" prefHeight="22.0" prefWidth="395.0" textFill="#0632ab">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Label>
+      <Label alignment="CENTER" layoutX="105.0" layoutY="119.0" text="NID">
+         <font>
+            <Font name="Calibri Bold" size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="NID_Text" layoutX="219.0" layoutY="119.0" prefHeight="25.0" prefWidth="190.0" promptText="NID Number" style="-fx-border-color: #0d0dff;" />
    </children>
 </AnchorPane>

@@ -21,12 +21,12 @@
       </Label>
       <AnchorPane layoutY="172.0" prefHeight="230.0" prefWidth="475.0" style="-fx-background-color: #e6f7ff; -fx-border-width: 2px; -fx-border-color: #0d0dff;">
          <children>
-            <Button layoutX="279.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchtoSigninScene" prefHeight="79.0" prefWidth="129.0" style="-fx-border-color: #0d0dff; -fx-border-style: dashed; -fx-border-width: 2px;" text="Traveler ">
+            <Button layoutX="279.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchtouserSigninScene" prefHeight="79.0" prefWidth="129.0" style="-fx-border-color: #0d0dff; -fx-border-style: dashed; -fx-border-width: 2px;" text="Traveler ">
                <font>
                   <Font name="Calibri Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutX="57.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchtoSigninScene" prefHeight="79.0" prefWidth="129.0" style="-fx-border-color: #0d0dff; -fx-border-style: dashed; -fx-border-width: 2px;" text="Manager">
+            <Button layoutX="57.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchtoservicefirstpageScene" prefHeight="79.0" prefWidth="129.0" style="-fx-border-color: #0d0dff; -fx-border-style: dashed; -fx-border-width: 2px;" text="Manager">
                <font>
                   <Font name="Calibri Bold" size="20.0" />
                </font>
