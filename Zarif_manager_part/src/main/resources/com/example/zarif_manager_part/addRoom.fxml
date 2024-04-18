@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="678.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zarif_manager_part.AddRoom">
+    <children>
+        <Label alignment="CENTER" layoutX="97.0" layoutY="27.0" prefHeight="75.0" prefWidth="527.0" text="ADD ROOM" textFill="#2980b9">
+            <font>
+                <Font name="System Bold" size="43.0" />
+            </font></Label>
+        <Label fx:id="hotelName" alignment="CENTER" layoutX="182.0" layoutY="102.0" prefHeight="27.0" prefWidth="357.0" text="HOTEL NAME">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </Label>
+        <Button fx:id="back" layoutX="28.0" layoutY="37.0" mnemonicParsing="false" onAction="#setBack" prefHeight="31.0" prefWidth="64.0" text="BACK" />
+        <Label alignment="BASELINE_RIGHT" layoutX="53.0" layoutY="138.0" prefHeight="46.0" prefWidth="171.0" text="FLOOR NUMBER : " textFill="#154360">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label alignment="BASELINE_RIGHT" layoutX="53.0" layoutY="185.0" prefHeight="46.0" prefWidth="171.0" text="ROOM NUMBER : " textFill="#154360">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label alignment="BASELINE_RIGHT" layoutX="53.0" layoutY="234.0" prefHeight="46.0" prefWidth="171.0" text="NUMBER OF BED : " textFill="#154360">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label alignment="BASELINE_RIGHT" layoutX="53.0" layoutY="282.0" prefHeight="46.0" prefWidth="171.0" text="SIDE : " textFill="#154360">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label alignment="BASELINE_RIGHT" layoutX="53.0" layoutY="333.0" prefHeight="46.0" prefWidth="171.0" text="FEATURE : " textFill="#154360">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label alignment="BASELINE_RIGHT" layoutX="53.0" layoutY="384.0" prefHeight="46.0" prefWidth="171.0" text="PRICE : " textFill="#154360">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="FloorNum" layoutX="242.0" layoutY="149.0" prefHeight="25.0" prefWidth="367.0" />
+        <ComboBox fx:id="BedNum" layoutX="242.0" layoutY="245.0" prefHeight="25.0" prefWidth="367.0" />
+        <ComboBox fx:id="Side" layoutX="242.0" layoutY="293.0" prefHeight="25.0" prefWidth="367.0" />
+        <TextField fx:id="RoomNo" layoutX="242.0" layoutY="189.0" prefHeight="38.0" prefWidth="367.0" promptText="ex: 601,602,.... etc">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="Price" layoutX="242.0" layoutY="388.0" prefHeight="38.0" prefWidth="367.0" promptText="in taka">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </TextField>
+        <Button fx:id="addRoom" layoutX="276.0" layoutY="519.0" mnemonicParsing="false" onAction="#setAddRoom" prefHeight="44.0" prefWidth="162.0" text="ADD ROOM" />
+        <Label fx:id="message" alignment="CENTER" layoutX="147.0" layoutY="450.0" prefHeight="46.0" prefWidth="457.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <CheckBox fx:id="AC" layoutX="243.0" layoutY="341.0" mnemonicParsing="false" onAction="#setAC" prefHeight="31.0" prefWidth="64.0" text="AC" textFill="#154360">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </CheckBox>
+        <CheckBox fx:id="Balconi" layoutX="314.0" layoutY="341.0" mnemonicParsing="false" onAction="#setBalconi" prefHeight="31.0" prefWidth="122.0" text="BALCONI" textFill="#154360">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </CheckBox>
+        <CheckBox fx:id="TV" layoutX="430.0" layoutY="341.0" mnemonicParsing="false" onAction="#setTV" prefHeight="31.0" prefWidth="64.0" text="TV" textFill="#154360">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </CheckBox>
+    </children>
+</Pane>
