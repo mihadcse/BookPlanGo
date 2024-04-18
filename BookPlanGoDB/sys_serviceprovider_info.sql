@@ -38,7 +38,7 @@ CREATE TABLE `serviceprovider_info` (
 
 LOCK TABLES `serviceprovider_info` WRITE;
 /*!40000 ALTER TABLE `serviceprovider_info` DISABLE KEYS */;
-INSERT INTO `serviceprovider_info` VALUES (1,'bool','1234',10101),(3,'bool','6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918',10101),(33,'bool','12',10101);
+INSERT INTO `serviceprovider_info` VALUES (1,'H-1','6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918',12),(6,'C1','6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918',12),(39,'39','0b918943df0962bc7a1824c0555a389347b4febdc7cf9d1254406d80ce44e3f9',39),(1001,'Hotel_1','fe675fe7aaee830b6fed09b64e034f84dcbdaeb429d9cccd4ebb90e15af8dd71',10001),(5000,'Car_1','0f8eb4b72b6e0c9e88b388eb967b49e067ef1004bf07bffc22c3acb13b43580a',5000);
 /*!40000 ALTER TABLE `serviceprovider_info` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-18  1:15:45
+-- Dump completed on 2024-04-19  0:23:29

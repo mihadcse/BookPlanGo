@@ -1,0 +1,14 @@
+.button {
+    -fx-background-radius: 60px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 3, 3);
+}
+
+  //.button:hover {
+  //-fx-background-color: #138D75;
+  //-fx-text-fill: #D1F2EB;
+  //-fx-transition: 0.7s;
+  //}
+
+/*#service_pass_Text {
+-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 3, 3);
+}*/
