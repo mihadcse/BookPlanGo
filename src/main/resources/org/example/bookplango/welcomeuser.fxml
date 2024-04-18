@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="404.0" prefWidth="475.0" style="-fx-border-color: #0d0dff; -fx-background-color: #e6f7ff; -fx-border-width: 2px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.SceneController">
+   <children>
+      <AnchorPane layoutX="38.0" layoutY="78.0" prefHeight="248.0" prefWidth="200.0" style="-fx-background-color: #9fc6a3; -fx-border-color: #0d0dff; -fx-border-width: 2px;">
+         <children>
+            <Label alignment="CENTER" layoutX="69.0" layoutY="37.0" prefHeight="17.0" prefWidth="62.0" text="HELLO">
+               <font>
+                  <Font name="Calibri Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="118.0" prefHeight="26.0" prefWidth="154.0" text="Welcome to">
+               <font>
+                  <Font name="Calibri Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="39.0" layoutY="153.0" prefHeight="26.0" prefWidth="122.0" text="BookPlanGo">
+               <font>
+                  <Font name="Calibri Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="username_label" alignment="CENTER" layoutX="9.0" layoutY="74.0" prefHeight="26.0" prefWidth="181.0">
+               <font>
+                  <Font name="Calibri Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="313.0" layoutY="78.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="107.0" style="-fx-border-color: #0d0dff;" text="Dashboard">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="313.0" layoutY="167.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="107.0" style="-fx-border-color: #0d0dff;" text="Booking">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="313.0" layoutY="256.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="107.0" style="-fx-border-color: #0d0dff;" text="Planning">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="20.0" layoutY="21.0" mnemonicParsing="false" onAction="#switchtouserSigninScene" style="-fx-background-color: #a61247;" text="Log out" textFill="#fffafa">
+         <font>
+            <Font name="Calibri Bold" size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

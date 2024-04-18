@@ -9,8 +9,8 @@
 
 <AnchorPane prefHeight="404.0" prefWidth="475.0" style="-fx-background-color: #9fc6a3; -fx-border-color: #0d0dff; -fx-border-width: 2px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.SceneController">
    <children>
-      <TextField fx:id="username_Text" layoutX="238.0" layoutY="115.0" prefHeight="25.0" prefWidth="195.0" promptText="Username" style="-fx-border-color: #0d0dff;" />
-      <Label alignment="CENTER" layoutX="80.0" layoutY="115.0" text="UserName">
+      <TextField fx:id="service_ID_Text" layoutX="238.0" layoutY="115.0" prefHeight="25.0" prefWidth="195.0" promptText="Service ID" style="-fx-border-color: #0d0dff;" />
+      <Label alignment="CENTER" layoutX="49.0" layoutY="116.0" prefHeight="26.0" prefWidth="158.0" text="Service ID">
          <font>
             <Font name="Calibri Bold" size="22.0" />
          </font>
@@ -20,13 +20,13 @@
             <Font name="Calibri Bold" size="22.0" />
          </font>
       </Label>
-      <PasswordField fx:id="password_text" layoutX="238.0" layoutY="163.0" prefHeight="25.0" prefWidth="195.0" promptText="Password" style="-fx-border-color: #0d0dff;" />
-      <Button fx:id="login_button" layoutX="150.0" layoutY="231.0" mnemonicParsing="false" onAction="#useronloginButtonclick" prefHeight="30.0" prefWidth="175.0" style="-fx-border-color: #0d0dff;" text="Login">
+      <PasswordField fx:id="service_pass_Text" layoutX="238.0" layoutY="163.0" prefHeight="25.0" prefWidth="195.0" promptText="Password" style="-fx-border-color: #0d0dff;" />
+      <Button fx:id="login_button" layoutX="150.0" layoutY="231.0" mnemonicParsing="false" onAction="#serviceonloginButtonclick" prefHeight="30.0" prefWidth="175.0" style="-fx-border-color: #0d0dff;" text="Login">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="signup_button" layoutX="150.0" layoutY="329.0" mnemonicParsing="false" onAction="#switchtouserSignupScene" prefHeight="30.0" prefWidth="175.0" style="-fx-border-color: #0d0dff;" text="Sign up">
+      <Button fx:id="signup_button" layoutX="150.0" layoutY="329.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="175.0" style="-fx-border-color: #0d0dff;" text="Sign up">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -36,17 +36,17 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="162.0" layoutY="44.0" prefHeight="30.0" prefWidth="151.0" style="-fx-background-color: #66ff99;" text="User Sign In">
+      <Label alignment="CENTER" layoutX="159.0" layoutY="44.0" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: #66ff99;" text="Service Sign In">
          <font>
             <Font name="Calibri Bold" size="25.0" />
          </font>
       </Label>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchtoUserScene" style="-fx-background-color: #a61247;" text="Back" textFill="#f8f8f8">
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchtoservicefirstpageScene" style="-fx-background-color: #a61247;" text="Back" textFill="#f8f8f8">
          <font>
             <Font name="Calibri Bold" size="11.0" />
          </font>
       </Button>
-      <Label fx:id="userlogin_label" alignment="CENTER" layoutX="119.0" layoutY="83.0" prefHeight="24.0" prefWidth="242.0" textFill="#0a7aeb">
+      <Label fx:id="servicelogin_label" alignment="CENTER" layoutX="119.0" layoutY="83.0" prefHeight="24.0" prefWidth="242.0" textFill="#0a7aeb">
          <font>
             <Font name="Calibri Bold" size="16.0" />
          </font>
