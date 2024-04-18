@@ -7,38 +7,38 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="404.0" prefWidth="475.0" style="-fx-background-color: #9fc6a3; -fx-border-color: #0d0dff; -fx-border-width: 2px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.SceneController">
+<AnchorPane prefHeight="404.0" prefWidth="475.0" style="-fx-background-color: #75d7c4;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.SceneController">
    <children>
-      <TextField fx:id="username_Text" layoutX="238.0" layoutY="115.0" prefHeight="25.0" prefWidth="195.0" promptText="Username" style="-fx-border-color: #0d0dff;" />
-      <Label alignment="CENTER" layoutX="80.0" layoutY="115.0" text="UserName">
+      <TextField fx:id="username_Text" layoutX="237.0" layoutY="133.0" prefHeight="25.0" prefWidth="195.0" promptText="Username" />
+      <Label alignment="CENTER" layoutX="79.0" layoutY="133.0" text="UserName" textFill="#d1f2eb">
          <font>
             <Font name="Calibri Bold" size="22.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="49.0" layoutY="162.0" prefHeight="28.0" prefWidth="158.0" text="Password">
+      <Label alignment="CENTER" layoutX="48.0" layoutY="180.0" prefHeight="28.0" prefWidth="158.0" text="Password" textFill="#d1f2eb">
          <font>
             <Font name="Calibri Bold" size="22.0" />
          </font>
       </Label>
-      <PasswordField fx:id="password_text" layoutX="238.0" layoutY="163.0" prefHeight="25.0" prefWidth="195.0" promptText="Password" style="-fx-border-color: #0d0dff;" />
-      <Button fx:id="login_button" layoutX="150.0" layoutY="231.0" mnemonicParsing="false" onAction="#useronloginButtonclick" prefHeight="30.0" prefWidth="175.0" style="-fx-border-color: #0d0dff;" text="Login">
+      <PasswordField fx:id="password_text" layoutX="237.0" layoutY="181.0" prefHeight="25.0" prefWidth="195.0" promptText="Password" />
+      <Button fx:id="login_button" layoutX="150.0" layoutY="241.0" mnemonicParsing="false" onAction="#useronloginButtonclick" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: #d1f2eb;" text="Login" textFill="#138d75">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="signup_button" layoutX="150.0" layoutY="329.0" mnemonicParsing="false" onAction="#switchtouserSignupScene" prefHeight="30.0" prefWidth="175.0" style="-fx-border-color: #0d0dff;" text="Sign up">
+      <Button fx:id="signup_button" layoutX="150.0" layoutY="329.0" mnemonicParsing="false" onAction="#switchtouserSignupScene" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: #d1f2eb;" text="Sign up" textFill="#138d75">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="90.0" layoutY="289.0" prefHeight="21.0" prefWidth="300.0" text="If you don't have account, Please Sign up">
+      <Label alignment="CENTER" layoutX="92.0" layoutY="290.0" prefHeight="21.0" prefWidth="300.0" text="If you don't have account, Please Sign up" textFill="#288672">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="162.0" layoutY="44.0" prefHeight="30.0" prefWidth="151.0" style="-fx-background-color: #66ff99;" text="User Sign In">
+      <Label alignment="CENTER" layoutY="-1.0" prefHeight="107.0" prefWidth="483.0" style="-fx-background-color: #d1f2eb;" text="User Sign In" textFill="#138d75">
          <font>
-            <Font name="Calibri Bold" size="25.0" />
+            <Font size="39.0" />
          </font>
       </Label>
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchtoUserScene" style="-fx-background-color: #a61247;" text="Back" textFill="#f8f8f8">

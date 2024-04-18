@@ -1,0 +1,39 @@
+//change bg color text
+
+//change button color
+
+//change the root bg color : parent stage.
+
+
+.button {
+-fx-background-color : #117864;
+-fx-text-fill: white;
+-fx-background-radius: 50px;
+//-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 3, 3);
+}
+
+.button:hover {
+-fx-background-color: #48C9B0;
+-fx-transition: 0.7s;
+}
+
+.button:active {
+-fx-background-color: blue;
+-fx-transition: 0.7s;
+}
+
+.label {
+-fx-background-color: #48C9B0;
+-fx-background-radius: 50px;
+-fx-alignment: center;
+-fx-text-fill: black;
+-fx-border-color: forestgreen;
+-fx-border-width: 2px;
+-fx-border-radius: 50px;
+-fx-font-size: 30px;
+-fx-font-weight: bold;
+}
+
+.root {
+-fx-background: #A3E4D7;
+}
