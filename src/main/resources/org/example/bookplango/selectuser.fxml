@@ -29,5 +29,10 @@
          </font>
       </Button>
       <Separator layoutX="-3.0" layoutY="137.0" prefHeight="8.0" prefWidth="481.0" style="-fx-border-color: #000000; -fx-background-color: #ffffff;" />
+      <Button accessibleRoleDescription=")" layoutX="145.0" layoutY="327.0" mnemonicParsing="false" onAction="#switchtoAdminSigninScene" prefHeight="57.0" prefWidth="185.0" style="-fx-background-color: #D1F2EB;" text="Admin" textFill="#138d75">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

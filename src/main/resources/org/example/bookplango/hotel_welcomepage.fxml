@@ -2,43 +2,95 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="404.0" prefWidth="475.0" style="-fx-background-color: #75d7c4;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.SceneController">
+<AnchorPane prefHeight="404.0" prefWidth="475.0" style="-fx-background-color: #00cc99; -fx-border-width: 2px;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.HotelWelcomeDashboard">
    <children>
-      <AnchorPane layoutX="168.0" prefHeight="404.0" prefWidth="308.0" style="-fx-background-color: #d1f2eb; -fx-border-color: #138d75; -fx-border-width: 1.5px;">
+      <AnchorPane layoutX="185.0" prefHeight="511.0" prefWidth="517.0" style="-fx-background-color: #d1f2eb; -fx-border-color: #29654f; -fx-border-width: 2px;">
          <children>
-            <Label alignment="CENTER" layoutX="94.0" layoutY="81.0" prefHeight="38.0" prefWidth="122.0" text="HELLO" textFill="#45b39d">
+            <Label alignment="CENTER" layoutX="184.0" layoutY="14.0" prefHeight="29.0" prefWidth="154.0" text="HELLO," textFill="#138d75">
                <font>
-                  <Font name="Calibri Bold" size="39.0" />
+                  <Font name="Calibri Bold" size="31.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="71.0" layoutY="239.0" prefHeight="35.0" prefWidth="166.0" text="Welcome to" textFill="#45b39d">
+            <Label fx:id="service_label_dashboard" alignment="CENTER" layoutX="189.0" layoutY="58.0" prefHeight="36.0" prefWidth="144.0" textFill="#0c1fcc">
                <font>
                   <Font name="Calibri Bold" size="29.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="64.0" layoutY="284.0" prefHeight="39.0" prefWidth="181.0" text="BookPlanGo" textFill="#45b39d">
+            <Label alignment="CENTER" layoutX="116.0" layoutY="109.0" prefHeight="36.0" prefWidth="288.0" text="Select options to view" textFill="#138d75">
                <font>
-                  <Font name="Calibri Bold" size="34.0" />
+                  <Font name="Calibri Bold" size="31.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="37.0" layoutY="149.0" prefHeight="72.0" prefWidth="235.0">
+            <ImageView fitHeight="339.0" fitWidth="527.0" layoutX="7.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" style="-fx-blend-mode: Overlay;">
+               <image>
+                  <Image url="@Bangladesh.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="94.0" layoutY="286.0" prefHeight="36.0" prefWidth="200.0" text="Available Rooms" textFill="#155447">
                <font>
-                  <Font name="Calibri Bold" size="19.0" />
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="116.0" layoutY="362.0" prefHeight="36.0" prefWidth="154.0" text="Booked Rooms" textFill="#155447">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="122.0" layoutY="212.0" prefHeight="36.0" prefWidth="144.0" text="Total Rooms" textFill="#155447">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="total_rooms" alignment="CENTER" layoutX="313.0" layoutY="212.0" prefHeight="36.0" prefWidth="61.0" style="-fx-background-color: #bfff80; -fx-border-color: #00cc99;" textFill="#155447">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="available_rooms" alignment="CENTER" layoutX="313.0" layoutY="286.0" prefHeight="36.0" prefWidth="61.0" style="-fx-background-color: #bfff80; -fx-border-color: #00cc99;" textFill="#155447">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="booked_rooms" alignment="CENTER" layoutX="312.0" layoutY="362.0" prefHeight="36.0" prefWidth="61.0" style="-fx-background-color: #bfff80; -fx-border-color: #00cc99;" textFill="#155447">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="-51.0" layoutY="153.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="192.0" style="-fx-background-color: #d1f2eb;" text="Dashboard" textFill="#138d75">
+      <Button alignment="CENTER" layoutX="20.0" layoutY="21.0" mnemonicParsing="false" onAction="#switchtoserviceSigninScene" style="-fx-background-color: #a61247;" text="Log out" textFill="#fffafa">
+         <font>
+            <Font name="Calibri Bold" size="11.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="66.0" prefHeight="36.0" prefWidth="154.0" text="BookPlanGo" textFill="#110fb9">
+         <font>
+            <Font name="Calibri Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-34.0" layoutY="189.0" mnemonicParsing="false" onAction="#switchtoHoteldashboardScene" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #d1f2eb;" text="Dashboard" textFill="#138d75">
          <font>
             <Font name="Calibri Bold" size="25.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="20.0" layoutY="21.0" mnemonicParsing="false" onAction="#switchtoserviceSigninScene" style="-fx-background-color: #a61247;" text="Log out" textFill="#fffafa">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-35.0" layoutY="266.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="200.0" style="-fx-background-color: #d1f2eb;" text="Booking" textFill="#138d75">
          <font>
-            <Font name="Calibri Bold" size="11.0" />
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-35.0" layoutY="343.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: #d1f2eb;" text="Modify" textFill="#138d75">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-35.0" layoutY="413.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="200.0" style="-fx-background-color: #d1f2eb;" text="Messages" textFill="#138d75">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
          </font>
       </Button>
    </children>

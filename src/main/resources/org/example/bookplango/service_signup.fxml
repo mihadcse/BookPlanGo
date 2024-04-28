@@ -14,24 +14,24 @@
             <Font name="Calibri Bold" size="31.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="64.0" layoutY="180.0" text="Phone" textFill="#138d75">
+      <Label alignment="CENTER" layoutX="64.0" layoutY="199.0" text="Phone" textFill="#138d75">
          <font>
             <Font name="Calibri Bold" size="23.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="64.0" layoutY="225.0" text="Service Name" textFill="#138d75">
+      <Label alignment="CENTER" layoutX="64.0" layoutY="244.0" text="Service Name" textFill="#138d75">
          <font>
             <Font name="Calibri Bold" size="23.0" />
          </font>
       </Label>
-      <TextField fx:id="service_phone_Text" layoutX="222.0" layoutY="181.0" prefHeight="25.0" prefWidth="190.0" promptText="Phone" style="-fx-border-color: #138d75;" />
-      <TextField fx:id="service_name_Text" layoutX="222.0" layoutY="226.0" prefHeight="25.0" prefWidth="190.0" promptText="Hotel_#,Car_#" style="-fx-border-color: #138d75;" />
-      <Label alignment="CENTER" layoutX="64.0" layoutY="266.0" text="Password" textFill="#138d75">
+      <TextField fx:id="service_phone_Text" layoutX="216.0" layoutY="200.0" prefHeight="27.0" prefWidth="196.0" promptText="Phone" style="-fx-border-color: #138d75;" />
+      <TextField fx:id="service_name_Text" layoutX="216.0" layoutY="245.0" prefHeight="27.0" prefWidth="196.0" promptText="Servicename" style="-fx-border-color: #138d75;" />
+      <Label alignment="CENTER" layoutX="64.0" layoutY="285.0" text="Password" textFill="#138d75">
          <font>
             <Font name="Calibri Bold" size="23.0" />
          </font>
       </Label>
-      <Button alignment="CENTER" layoutX="176.0" layoutY="321.0" mnemonicParsing="false" onAction="#serviceonsignupButtonclick" prefHeight="34.0" prefWidth="124.0" style="-fx-background-color: #d1f2eb;" text="Sign up" textFill="#138d75">
+      <Button alignment="CENTER" layoutX="176.0" layoutY="329.0" mnemonicParsing="false" onAction="#serviceonsignupButtonclick" prefHeight="34.0" prefWidth="124.0" style="-fx-background-color: #d1f2eb;" text="Sign up" textFill="#138d75">
          <font>
             <Font name="Calibri Bold" size="18.0" />
          </font>
@@ -41,17 +41,27 @@
             <Font name="Calibri Bold" size="11.0" />
          </font>
       </Button>
-      <PasswordField fx:id="service_pass_Text" layoutX="222.0" layoutY="267.0" prefHeight="25.0" prefWidth="190.0" promptText="Password" style="-fx-border-color: #138d75;" />
+      <PasswordField fx:id="service_pass_Text" layoutX="216.0" layoutY="286.0" prefHeight="27.0" prefWidth="196.0" promptText="Password" style="-fx-border-color: #138d75;" />
       <Label fx:id="servicelogin_label" alignment="CENTER" layoutX="39.0" layoutY="363.0" prefHeight="27.0" prefWidth="395.0" textFill="#0632ab">
          <font>
             <Font name="Calibri Bold" size="19.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="64.0" layoutY="138.0" text="Service_ID" textFill="#138d75">
+      <Label alignment="CENTER" layoutX="64.0" layoutY="157.0" text="Service_ID" textFill="#138d75">
          <font>
             <Font name="Calibri Bold" size="23.0" />
          </font>
       </Label>
-      <TextField fx:id="service_ID_Text" layoutX="222.0" layoutY="139.0" prefHeight="25.0" prefWidth="190.0" promptText="ID(Hotel= 1###, Car = 5###)" style="-fx-border-color: #138d75;" />
+      <TextField fx:id="service_ID_Text" layoutX="216.0" layoutY="158.0" prefHeight="27.0" prefWidth="196.0" promptText="ID" style="-fx-border-color: #138d75;" />
+      <Button alignment="CENTER" layoutX="231.0" layoutY="114.0" mnemonicParsing="false" onAction="#hotel_click_signup" prefHeight="34.0" prefWidth="69.0" style="-fx-background-color: #d1f2eb;" text="Hotel" textFill="#138d75">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="331.0" layoutY="114.0" mnemonicParsing="false" onAction="#car_click_signup" prefHeight="34.0" prefWidth="69.0" style="-fx-background-color: #d1f2eb;" text="Car" textFill="#138d75">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

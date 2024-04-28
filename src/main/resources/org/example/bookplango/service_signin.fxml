@@ -36,7 +36,7 @@
             <Font name="Calibri Bold" size="16.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-4.0" prefHeight="107.0" prefWidth="483.0" style="-fx-background-color: #d1f2eb; -fx-border-color: #138d75; -fx-border-width: 1.5px;" text="Service Sign In" textFill="#138d75">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-4.0" prefHeight="107.0" prefWidth="483.0" style="-fx-background-color: #d1f2eb;" text="Service Sign In" textFill="#138d75">
          <font>
             <Font name="Calibri Bold" size="39.0" />
          </font>
