@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.EditRoom">
+   <children>
+      <Label alignment="CENTER" layoutX="-2.0" layoutY="-3.0" prefHeight="136.0" prefWidth="902.0" style="-fx-background-color: #d1f2eb;" text="EDIT ROOM">
+         <font>
+            <Font name="System Bold" size="47.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="121.0" layoutY="179.0" prefHeight="44.0" prefWidth="172.0" text="Location: ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="location" layoutX="294.0" layoutY="184.0" onAction="#setLocation" prefHeight="35.0" prefWidth="219.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="121.0" layoutY="242.0" prefHeight="44.0" prefWidth="172.0" text="Hotel: ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="hotel" layoutX="294.0" layoutY="247.0" onAction="#setHotel" prefHeight="35.0" prefWidth="219.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="121.0" layoutY="311.0" prefHeight="44.0" prefWidth="172.0" text="Floor: ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="floor" layoutX="294.0" layoutY="316.0" onAction="#setFloor" prefHeight="35.0" prefWidth="219.0" />
+      <CheckBox fx:id="ac" layoutX="647.0" layoutY="232.0" mnemonicParsing="false" onAction="#setAC" prefHeight="44.0" prefWidth="111.0" text="AC" textFill="#138d75">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="tv" layoutX="647.0" layoutY="304.0" mnemonicParsing="false" onAction="#setTV" prefHeight="44.0" prefWidth="111.0" text="TV" textFill="#138d75">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="balcony" layoutX="647.0" layoutY="377.0" mnemonicParsing="false" onAction="#setBelconi" prefHeight="44.0" prefWidth="111.0" text="Balcony" textFill="#138d75">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <TextField fx:id="Price" layoutX="294.0" layoutY="470.0" prefHeight="35.0" prefWidth="219.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="122.0" layoutY="466.0" prefHeight="44.0" prefWidth="172.0" text="Price: ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="message" alignment="CENTER" layoutX="349.0" layoutY="589.0" prefHeight="46.0" prefWidth="243.0" />
+      <Button fx:id="done" layoutX="659.0" layoutY="578.0" mnemonicParsing="false" onAction="#setDone" prefHeight="64.0" prefWidth="176.0" text="DONE" />
+      <Button fx:id="deleteRoom" layoutX="79.0" layoutY="577.0" mnemonicParsing="false" onAction="#setDeleteRoom" prefHeight="64.0" prefWidth="202.0" text="REMOVE ROOM" />
+      <Button fx:id="back" layoutX="40.0" layoutY="36.0" mnemonicParsing="false" onAction="#setBack" prefHeight="22.0" prefWidth="52.0" text="back" />
+      <Label alignment="CENTER_RIGHT" layoutX="120.0" layoutY="385.0" prefHeight="44.0" prefWidth="172.0" text="Room: ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="room" layoutX="294.0" layoutY="388.0" onAction="#setInfo" prefHeight="35.0" prefWidth="219.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="586.0" layoutY="466.0" prefHeight="44.0" prefWidth="88.0" text="BED: ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="bed" layoutX="675.0" layoutY="471.0" onAction="#setBed" prefHeight="35.0" prefWidth="88.0" />
+   </children>
+</Pane>

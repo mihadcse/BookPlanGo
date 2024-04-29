@@ -1,0 +1,47 @@
+.root {
+-fx-background-color:  #75D7C4;
+}
+
+.label {
+-fx-text-fill: #138d75;
+}
+
+.button {
+    -fx-background-radius: 60px;
+    -fx-background-color: #d1f2eb;
+    -fx-text-fill: #138d75;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 3, 3);
+}
+
+  .button:hover {
+  -fx-background-color: #138D75;
+  -fx-text-fill: #003380 ; //  #D1F2EB  #1a0000
+  -fx-transition: 0.7s;
+  }
+/*
+.table-view .corner
+!*#service_pass_Text {
+-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 3, 3);
+}*!
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+.table-row-cell:hover {
+    -fx-background-color: #93f9b911;
+    -fx-text-background-color: red;
+}
+.table-row-cell:odd{
+    -fx-background-color: #93f9b911;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell:even{
+    -fx-background-color: #1dbbdd11;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}*/

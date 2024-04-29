@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.ManagerDashboard">
+   <children>
+      <Label fx:id="welcome" alignment="CENTER" layoutX="181.0" layoutY="30.0" prefHeight="50.0" prefWidth="539.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="seeProfile" layoutX="150.0" layoutY="125.0" mnemonicParsing="false" onAction="#setSeeProfile" prefHeight="78.0" prefWidth="242.0" text="SEE PROFILE" />
+      <Button fx:id="addHotel" layoutX="533.0" layoutY="124.0" mnemonicParsing="false" onAction="#setAddHotel" prefHeight="78.0" prefWidth="242.0" text="ADD HOTEL" />
+      <Button fx:id="addRoom" layoutX="150.0" layoutY="240.0" mnemonicParsing="false" onAction="#setAddRoom" prefHeight="78.0" prefWidth="242.0" text="ADD ROOM" />
+      <Button fx:id="editHotel" layoutX="533.0" layoutY="239.0" mnemonicParsing="false" onAction="#setEditHotel" prefHeight="78.0" prefWidth="242.0" text="EDIT HOTEL" />
+      <Button fx:id="editRoom" layoutX="149.0" layoutY="354.0" mnemonicParsing="false" onAction="#setEditRoom" prefHeight="78.0" prefWidth="242.0" text="EDIT ROOM" />
+      <Button fx:id="addVehicle" layoutX="533.0" layoutY="353.0" mnemonicParsing="false" onAction="#setAddVehicle" prefHeight="78.0" prefWidth="242.0" text="ADD VEHICLE" />
+      <Button fx:id="editVehicle" layoutX="152.0" layoutY="473.0" mnemonicParsing="false" onAction="#setEditVehicle" prefHeight="78.0" prefWidth="242.0" text="EDIT VEHICLE" />
+      <Button fx:id="editProfile" layoutX="533.0" layoutY="472.0" mnemonicParsing="false" onAction="#setEditProfile" prefHeight="78.0" prefWidth="242.0" text="EDIT PROFILE" />
+      <Button fx:id="logout" layoutX="380.0" layoutY="604.0" mnemonicParsing="false" onAction="#setLogout" prefHeight="50.0" prefWidth="186.0" text="LOGOUT" />
+      <Label fx:id="message" alignment="CENTER" layoutY="-1.0" prefHeight="98.0" prefWidth="903.0" style="-fx-background-color: #d1f2eb;">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
