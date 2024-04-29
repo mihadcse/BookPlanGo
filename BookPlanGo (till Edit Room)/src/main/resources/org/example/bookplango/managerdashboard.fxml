@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.ManagerDashboard">
+   <children>
+      <Label fx:id="welcome" alignment="CENTER" layoutX="181.0" layoutY="30.0" prefHeight="50.0" prefWidth="539.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="seeProfile" layoutX="181.0" layoutY="150.0" mnemonicParsing="false" onAction="#setSeeProfile" prefHeight="78.0" prefWidth="242.0" text="SEE PROFILE" />
+      <Button fx:id="addHotel" layoutX="489.0" layoutY="150.0" mnemonicParsing="false" onAction="#setAddHotel" prefHeight="78.0" prefWidth="242.0" text="ADD HOTEL" />
+      <Button fx:id="addRoom" layoutX="181.0" layoutY="265.0" mnemonicParsing="false" onAction="#setAddRoom" prefHeight="78.0" prefWidth="242.0" text="ADD ROOM" />
+      <Button fx:id="editHotel" layoutX="489.0" layoutY="265.0" mnemonicParsing="false" onAction="#setEditHotel" prefHeight="78.0" prefWidth="242.0" text="EDIT HOTEL" />
+      <Button fx:id="editRoom" layoutX="188.0" layoutY="379.0" mnemonicParsing="false" onAction="#setEditRoom" prefHeight="78.0" prefWidth="242.0" text="EDIT ROOM" />
+      <Button fx:id="addVehicle" layoutX="489.0" layoutY="379.0" mnemonicParsing="false" onAction="#setAddVehicle" prefHeight="78.0" prefWidth="242.0" text="ADD VEHICLE" />
+      <Button fx:id="editVehicle" layoutX="181.0" layoutY="498.0" mnemonicParsing="false" onAction="#setEditVehicle" prefHeight="78.0" prefWidth="242.0" text="EDIT VEHICLE" />
+      <Button fx:id="editProfile" layoutX="489.0" layoutY="498.0" mnemonicParsing="false" onAction="#setEditProfile" prefHeight="78.0" prefWidth="242.0" text="EDIT PROFILE" />
+      <Button fx:id="logout" layoutX="357.0" layoutY="602.0" mnemonicParsing="false" onAction="#setLogout" prefHeight="50.0" prefWidth="186.0" text="LOGOUT" />
+      <Label fx:id="message" alignment="CENTER" layoutX="318.0" layoutY="87.0" prefHeight="40.0" prefWidth="269.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

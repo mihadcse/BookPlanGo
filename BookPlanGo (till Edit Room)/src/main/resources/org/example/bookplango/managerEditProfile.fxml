@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.ManagerEditProfile">
+   <children>
+      <Label alignment="CENTER" layoutX="249.0" layoutY="34.0" prefHeight="64.0" prefWidth="404.0" text="EDIT PROFILE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="78.0" layoutY="116.0" prefHeight="50.0" prefWidth="233.0" text="Name: ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="311.0" layoutY="116.0" prefHeight="50.0" prefWidth="455.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="78.0" layoutY="176.0" prefHeight="50.0" prefWidth="233.0" text="Email: ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="email" layoutX="311.0" layoutY="176.0" prefHeight="50.0" prefWidth="455.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="78.0" layoutY="238.0" prefHeight="50.0" prefWidth="233.0" text="Username: ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="username" layoutX="311.0" layoutY="238.0" prefHeight="50.0" prefWidth="455.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="78.0" layoutY="301.0" prefHeight="50.0" prefWidth="233.0" text="NID: ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nid" layoutX="311.0" layoutY="301.0" prefHeight="50.0" prefWidth="455.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </TextField>
+      <Button fx:id="back" layoutX="37.0" layoutY="28.0" mnemonicParsing="false" onAction="#setBack" text="back" />
+      <Button fx:id="done" layoutX="369.0" layoutY="608.0" mnemonicParsing="false" onAction="#setDone" prefHeight="44.0" prefWidth="165.0" text="DONE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <Button fx:id="changePassword" layoutX="375.0" layoutY="499.0" mnemonicParsing="false" onAction="#setChangePassword" prefHeight="36.0" prefWidth="150.0" text="CHANGE PASSWORD" />
+      <Label fx:id="message" alignment="CENTER" layoutX="5.0" layoutY="551.0" prefHeight="42.0" prefWidth="894.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="pa" alignment="CENTER_RIGHT" layoutX="78.0" layoutY="365.0" prefHeight="50.0" prefWidth="233.0" text="Password: ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="password" layoutX="318.0" layoutY="365.0" prefHeight="50.0" prefWidth="455.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </TextField>
+      <Button fx:id="confirm" layoutX="314.0" layoutY="442.0" mnemonicParsing="false" onAction="#setConfirm" prefHeight="25.0" prefWidth="123.0" text="CONFIRM" />
+      <Button fx:id="cancel" layoutX="653.0" layoutY="442.0" mnemonicParsing="false" onAction="#setCancel" prefHeight="25.0" prefWidth="123.0" text="CANCEL" />
+   </children>
+</Pane>

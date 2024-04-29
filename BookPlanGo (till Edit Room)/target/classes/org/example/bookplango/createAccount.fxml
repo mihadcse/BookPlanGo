@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.CreateAccount">
+   <children>
+      <Label alignment="CENTER" layoutX="250.0" layoutY="43.0" prefHeight="86.0" prefWidth="400.0" text="CREATE ACCOUNT">
+         <font>
+            <Font name="System Bold" size="43.0" />
+         </font>
+      </Label>
+      <Label fx:id="role" alignment="CENTER" layoutX="319.0" layoutY="117.0" prefHeight="30.0" prefWidth="277.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="139.0" layoutY="225.0" prefHeight="53.0" prefWidth="228.0" text="NID no: ">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nid" layoutX="376.0" layoutY="230.0" prefHeight="44.0" prefWidth="320.0" promptText="NID">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="139.0" layoutY="284.0" prefHeight="53.0" prefWidth="228.0" text="Email: ">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="email" layoutX="376.0" layoutY="289.0" prefHeight="44.0" prefWidth="320.0" promptText="Email">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="139.0" layoutY="343.0" prefHeight="53.0" prefWidth="228.0" text="Username: ">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="username" layoutX="376.0" layoutY="348.0" prefHeight="44.0" prefWidth="320.0" promptText="Username">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="139.0" layoutY="403.0" prefHeight="53.0" prefWidth="228.0" text="Password: ">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="password" layoutX="376.0" layoutY="408.0" prefHeight="44.0" prefWidth="320.0" promptText="password">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label fx:id="message" alignment="CENTER" layoutX="6.0" layoutY="488.0" prefHeight="36.0" prefWidth="888.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="createAccount" layoutX="340.0" layoutY="566.0" mnemonicParsing="false" onAction="#setCreateAccount" prefHeight="65.0" prefWidth="221.0" text="CREATE ACCOUNT">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="back" layoutX="30.0" layoutY="24.0" mnemonicParsing="false" onAction="#setBack" prefHeight="19.0" prefWidth="49.0" text="back" />
+      <Label alignment="CENTER_RIGHT" layoutX="139.0" layoutY="167.0" prefHeight="53.0" prefWidth="228.0" text="Name: ">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="376.0" layoutY="172.0" prefHeight="44.0" prefWidth="320.0" promptText="Name">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+   </children>
+</Pane>
