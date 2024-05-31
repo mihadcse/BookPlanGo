@@ -35,11 +35,11 @@
             </ImageView>
             <TableView fx:id="travelerDashboardTableView" layoutX="7.0" layoutY="164.0" prefHeight="339.0" prefWidth="509.0" style="-fx-background-color: #d1f2eb; -fx-border-color: #75d7c4; -fx-border-width: 2px;">
               <columns>
-                <TableColumn fx:id="travelerIDTableColumn" editable="false" prefWidth="67.0" text="id" />
-                <TableColumn fx:id="travelerDestinationTableColumn" editable="false" prefWidth="114.0" text="Destination" />
-                  <TableColumn fx:id="travelerStartTableColumn" editable="false" prefWidth="89.0" text="Start Date" />
-                  <TableColumn fx:id="travelerEndTableColumn" editable="false" prefWidth="92.0" text="End Date" />
-                  <TableColumn fx:id="travelerExpensesTableColumn" editable="false" prefWidth="142.0" text="Expenses" />
+                <TableColumn fx:id="travelerHotelTableColumn" editable="false" prefWidth="92.0" text="Hotel Name" />
+                <TableColumn fx:id="travelerDestinationTableColumn" editable="false" prefWidth="105.0" text="Destination" />
+                  <TableColumn fx:id="travelerStartTableColumn" editable="false" prefWidth="87.0" text="Start Date" />
+                  <TableColumn fx:id="travelerEndTableColumn" editable="false" prefWidth="110.0" text="End Date" />
+                  <TableColumn fx:id="travelerExpensesTableColumn" editable="false" prefWidth="110.0" text="Expenses" />
               </columns>
             </TableView>
          </children>
@@ -49,7 +49,7 @@
             <Font name="Calibri Bold" size="25.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-45.0" layoutY="256.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="200.0" style="-fx-background-color: #d1f2eb;" text="Booking" textFill="#138d75">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-45.0" layoutY="256.0" mnemonicParsing="false" onAction="#switchtouserBookingScene" prefHeight="27.0" prefWidth="200.0" style="-fx-background-color: #d1f2eb;" text="Booking" textFill="#138d75">
          <font>
             <Font name="Calibri Bold" size="25.0" />
          </font>

@@ -21,7 +21,7 @@
                   <Font name="Calibri Bold" size="29.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="116.0" layoutY="109.0" prefHeight="36.0" prefWidth="288.0" text="Select options to view" textFill="#138d75">
+            <Label alignment="CENTER" layoutX="116.0" layoutY="109.0" prefHeight="36.0" prefWidth="288.0" text="Booking" textFill="#138d75">
                <font>
                   <Font name="Calibri Bold" size="31.0" />
                </font>
@@ -31,6 +31,21 @@
                   <Image url="@Bangladesh.jpg" />
                </image>
             </ImageView>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="188.0" layoutY="281.0" mnemonicParsing="false" onAction="#switchtouserBooking_HotelScene" prefHeight="46.0" prefWidth="144.0" style="-fx-background-color: #d1f2eb;" text="Hotel" textFill="#138d75">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="188.0" layoutY="359.0" mnemonicParsing="false" onAction="#switchtouserBooking_CarScene" prefHeight="46.0" prefWidth="144.0" style="-fx-background-color: #d1f2eb;" text="Car" textFill="#138d75">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="117.0" layoutY="209.0" prefHeight="36.0" prefWidth="304.0" text="Select Booking Options" textFill="#138d75">
+               <font>
+                  <Font name="Calibri Bold" size="31.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <Button alignment="CENTER" layoutX="20.0" layoutY="21.0" mnemonicParsing="false" onAction="#switchtouserSigninScene" style="-fx-background-color: #a61247;" text="Log out" textFill="#fffafa">
@@ -48,7 +63,7 @@
             <Font name="Calibri Bold" size="25.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-35.0" layoutY="266.0" mnemonicParsing="false" onAction="#switchtouserBookingScene" prefHeight="27.0" prefWidth="200.0" style="-fx-background-color: #d1f2eb;" text="Booking" textFill="#138d75">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-18.0" layoutY="266.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="200.0" style="-fx-background-color: #9ce3d3;" text="Booking" textFill="#138d75">
          <font>
             <Font name="Calibri Bold" size="25.0" />
          </font>

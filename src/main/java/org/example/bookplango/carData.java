@@ -2,25 +2,25 @@ package org.example.bookplango;
 
 import javafx.scene.control.Button;
 
-public class Hotel_Dashboard {
+public class carData {
     Integer price;
-    String room_num,bedding,ac_non_ac,status;
+    String licsence,type,ac_non_ac,status;
     private Button select;
 
-    public Hotel_Dashboard(String room_num,Integer price, String room_type, String ac_non_ac, String status) {
-        this.room_num=room_num;
+    public carData(String licsence,Integer price, String type, String ac_non_ac, String status) {
+        this.licsence=licsence;
         this.price = price;
-        this.bedding = room_type;
+        this.type = type;
         this.ac_non_ac = ac_non_ac;
         this.status = status;
         this.select=new Button("SELECT");
     }
-    public String getRoom_num() {
-        return room_num;
+    public String getLicsence() {
+        return licsence;
     }
 
-    public void setRoom_num(String room_num) {
-        this.room_num = room_num;
+    public void setLicsence(String licsence) {
+        this.licsence = licsence;
     }
 
     public Integer getPrice() {
@@ -31,12 +31,12 @@ public class Hotel_Dashboard {
         this.price = price;
     }
 
-    public String getBedding() {
-        return bedding;
+    public String getType() {
+        return type;
     }
 
-    public void setBedding(String bedding) {
-        this.bedding = bedding;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getAc_non_ac() {
