@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -26,6 +27,8 @@ public class CarAddVehicle {
     private TextField licsence;
     @FXML
     private TextField seat;
+    @FXML
+    private TextField imagePath;
     @FXML
     private TextField price;
     @FXML
@@ -159,8 +162,8 @@ public class CarAddVehicle {
     }
     @FXML
     public void setAdd() {
-        String vt = VehicleType.getValue(), ln = licsence.getText(), sn = seat.getText(), ac = AC.getValue(), pr = price.getText();
-        if (vt == null || ln.equals("") || sn.equals("") || ac == null || pr.equals("")) {
+        String vt = VehicleType.getValue(), ln = licsence.getText(), sn = seat.getText(), ac = AC.getValue(), pr = price.getText(),ip=imagePath.getText();
+        if (vt == null || ln.equals("") || sn.equals("") || ac == null || pr.equals("") || ip.equals("")) {
             message.setText("Fill up all information");
         } else {
             DatabaseConnection databaseConnection = new DatabaseConnection();
@@ -181,8 +184,8 @@ public class CarAddVehicle {
                     "Rajshahi,\n" +
                     "Sylhet,\n" +
                     "Rangpur,\n" +
-                    "AC) VALUES\n" +
-                    "(" + Integer.parseInt(S_ID) + ",'" + ln + "','" + vt + "','" + sn + "','" + loc + "','Available','" + Integer.parseInt(pr) + "','" + dha + "','" + mym + "','" + bar + "','" + khu + "','" + cha + "','"+raj+"','" + syl + "','" + ran + "','" + ac + "');";
+                    "AC, ImagePath) VALUES\n" +
+                    "(" + Integer.parseInt(S_ID) + ",'" + ln + "','" + vt + "','" + sn + "','" + loc + "','Available','" + Integer.parseInt(pr) + "','" + dha + "','" + mym + "','" + bar + "','" + khu + "','" + cha + "','"+raj+"','" + syl + "','" + ran + "','" + ac + "','"+ip+"');";
             try {
                 Statement statement = connection.createStatement();
                 statement.executeUpdate(q);
@@ -238,6 +241,17 @@ public class CarAddVehicle {
         carDashboard.setData(S_ID);
         stage.show();
     }
-
+    @FXML
+    public void Booking(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader fxmlLoader=new FXMLLoader(BookPlanGo_Main.class.getResource("car_manager_see_booking.fxml"));
+        //Parent root = FXMLLoader.load(getClass().getResource("service_edit_profile.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.setResizable(false);
+        CarManagerSeeBooking carManagerSeeBooking=fxmlLoader.getController();
+        carManagerSeeBooking.setData(S_ID);
+        stage.show();
+    }
 
 }

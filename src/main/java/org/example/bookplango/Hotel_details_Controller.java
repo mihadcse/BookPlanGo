@@ -36,6 +36,7 @@ public class Hotel_details_Controller {
     private DatePicker pick_end;
     String s = "",H_name,H_address,H_image;
     Integer H_ID;
+    Integer nid;
     Long total_expense;
 
     @FXML
@@ -103,8 +104,13 @@ public class Hotel_details_Controller {
         hotel_Name.setText(H_name);
         hotel_location.setText(H_address);
 
+
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
+
+        String UpdateAvailable = "UPDATE h_roomdetails\n" +
+                "SET room_status = 'Available',customer_id = null,book_start_date = null, book_end_date = null\n" +
+                "WHERE book_end_date IS NULL OR book_end_date < CURDATE()";
 
         String Viewquery = "Select h_roomdetails.room_num,h_roomdetails.bedding,h_roomdetails.room_ac,h_roomdetails.room_price from h_roomdetails,serviceprovider_info\n" +
                 "where serviceprovider_info.service_id = h_roomdetails.Hotel_ID and serviceprovider_info.service_name = '"+H_name+"'and room_status = 'Available'";
@@ -117,6 +123,12 @@ public class Hotel_details_Controller {
                 Integer query_ID = queryOutput2.getInt("Hotel_ID");
                 H_image = queryimage;
                 H_ID = query_ID;
+            }
+            queryOutput2.close();
+            int queryUpadte = statement2.executeUpdate (UpdateAvailable);
+            if(queryUpadte>0)
+            {
+                System.out.println("Updated Available rooms");
             }
             if (H_image != null) {
                 Image image1 = new Image(H_image);
@@ -173,27 +185,41 @@ public class Hotel_details_Controller {
         long daysBetween = ChronoUnit.DAYS.between(startDate, endDate);
 
         total_expense = daysBetween * room_list.get(0).getPrice();
-        expence.setText(Long.toString(total_expense));
+        //expence.setText(Long.toString(total_expense));
         String query_name = "Select NID from sys.userinfo where Username = '"+s+"'";
 
-        String Viewquery = "UPDATE sys.h_roomdetails SET room_status = 'Booked' where room_num ='"+room_list.get(0).getRoom_number()+"'";
+        //String Viewquery = "UPDATE sys.h_roomdetails SET room_status = 'Booked' where room_num ='"+room_list.get(0).getRoom_number()+"'";
       
         try{
             String NewQuery;
             Integer queryoutput = 0;
             Statement statement2 = connectDB.createStatement();
-            int queryOutput2 = statement2.executeUpdate (Viewquery);
+            //int queryOutput2 = statement2.executeUpdate (Viewquery);
             
             ResultSet res = statement2.executeQuery(query_name);
             if(res.next())
             {
-                Integer nid = res.getInt("NID");
+                nid = res.getInt("NID");
                 NewQuery = "UPDATE sys.h_roomdetails\n" +
-                        "SET customer_id = '"+nid+"', \n" +
-                        "    book_start_date = '"+startDate+"', \n" +
-                        "    book_end_date = '"+endDate+"'\n" +
-                        "WHERE room_num = '"+room_list.get(0).getRoom_number()+"'";
+                        "SET customer_id = '"+nid+"',\n" +
+                        "book_start_date = '"+startDate+"',\n" +
+                        "book_end_date = '"+endDate+"',\n" +
+                        "room_status = 'Booked'\n" +
+                        "WHERE room_num = '"+room_list.get(0).getRoom_number()+"'\n" +
+                        "AND room_status = 'Available'\n" +
+                        "AND ( \n" +
+                        "    '"+startDate+"' BETWEEN CURDATE() AND CURDATE() + INTERVAL 1 DAY  \n" +
+                        "    OR  \n" +
+                        "    '"+endDate+"' + INTERVAL 1 DAY BETWEEN CURDATE() AND CURDATE() + INTERVAL 1 DAY\n" +
+                        ")";
                 queryoutput = statement2.executeUpdate(NewQuery);
+            }
+
+            if(queryoutput>0)
+            {
+                System.out.println("Add date Updated");
+                booking_label.setText("Booking complete");
+                expence.setText(Long.toString(total_expense));
                 String insert_details = "INSERT INTO `sys`.`tourdetails`\n" +
                         "(`traveler_nid`,`hotel_name`,`StartDate`,`EndDate`,`Destination`,`Total_Expenses`)\n" +
                         "VALUES\n" +
@@ -203,14 +229,9 @@ public class Hotel_details_Controller {
                     System.out.println("Insert done in tour details");
                 }
             }
-            
-            if(queryOutput2>0)
+            else
             {
-                booking_label.setText("Booking complete");
-            }
-            if(queryoutput>0)
-            {
-                System.out.println("Add date Updated");
+                booking_label.setText("Booking Rejected");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

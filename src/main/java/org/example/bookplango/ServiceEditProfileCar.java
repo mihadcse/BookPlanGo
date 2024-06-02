@@ -122,7 +122,9 @@ public class ServiceEditProfileCar {
                     notification.setText("Invalid password");
                 }else{
                     Statement statement1=connectDB.createStatement();
+                    Statement statement2=connectDB.createStatement();
                     statement1.executeUpdate("UPDATE serviceprovider_info SET service_location = '"+entered_s_location+"', service_phone_no ='"+entered_phone+"' WHERE service_id = "+S_ID+" and service_type='Car'; ");
+                    statement2.executeUpdate("UPDATE car_details SET Location ='"+entered_s_location+"' WHERE CarID = "+S_ID+";");
                     setdata(S_ID);
                     notification.setText("Updated");
                 }
@@ -175,6 +177,18 @@ public class ServiceEditProfileCar {
         stage.setResizable(false);
         CarWelcomeController carWelcomeController=fxmlLoader.getController();
         carWelcomeController.setData(S_ID);
+        stage.show();
+    }
+    @FXML
+    public void Booking(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader fxmlLoader=new FXMLLoader(BookPlanGo_Main.class.getResource("car_manager_see_booking.fxml"));
+        //Parent root = FXMLLoader.load(getClass().getResource("service_edit_profile.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.setResizable(false);
+        CarManagerSeeBooking carManagerSeeBooking=fxmlLoader.getController();
+        carManagerSeeBooking.setData(S_ID);
         stage.show();
     }
 

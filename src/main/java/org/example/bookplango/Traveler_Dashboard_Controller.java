@@ -32,6 +32,8 @@ public class Traveler_Dashboard_Controller {
     private Scene scene;
     UserWelcomeDashboard user_dash;
 
+    Integer nid;
+
     String s = "";
 
     @FXML
@@ -79,6 +81,43 @@ public class Traveler_Dashboard_Controller {
         initialize();
     }
 
+    public void switchtouserMessageScene(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("message.fxml"));
+        Parent root = fxmlLoader.load();
+        Traveler_Message_Controller us = fxmlLoader.getController();
+        us.setWelcome(s);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+        us.initialize();
+    }
+
+    public void switchtouserPlanningScene(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("traveler_planning.fxml"));
+        Parent root = fxmlLoader.load();
+        Traveler_Planning_Controller us = fxmlLoader.getController();
+        us.setWelcome(s);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    public void switchtouserCarDashboardScene(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("user_dashboard_car.fxml"));
+        Parent root = fxmlLoader.load();
+        Traveler_Car_Dashboard_Controller us = fxmlLoader.getController();
+        us.setWelcome(s);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+        us.initialize();
+    }
 
     ObservableList<Traveler_Dashboard> traveler_dashboardObservableList = FXCollections.observableArrayList();
 
@@ -91,9 +130,9 @@ public class Traveler_Dashboard_Controller {
         try{
             Statement statement = connectDB.createStatement();
             ResultSet res = statement.executeQuery(query_name);
-            while (res.next()) {
-                Integer nid = res.getInt("NID");
-
+            if(res.next()) {
+                nid = res.getInt("NID");
+            }
                 String travelerTableViewquery = "SELECT `tourdetails`.`traveler_nid`,\n" +
                         "    `tourdetails`.`hotel_name`,\n" +
                         "    `tourdetails`.`StartDate`,\n" +
@@ -112,7 +151,7 @@ public class Traveler_Dashboard_Controller {
                     String queryhotelname = queryOutput.getString("hotel_name");
                     traveler_dashboardObservableList.add(new Traveler_Dashboard(queryExpenses, queryDestination, queryhotelname, queryStartdate, queryEnddate));
                 }
-            }
+
 
             travelerHotelTableColumn.setCellValueFactory(new PropertyValueFactory<>("hotel_name"));
             travelerDestinationTableColumn.setCellValueFactory (new PropertyValueFactory<>("Destination"));

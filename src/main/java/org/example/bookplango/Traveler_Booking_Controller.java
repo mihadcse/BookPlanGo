@@ -53,6 +53,19 @@ public class Traveler_Booking_Controller {
         stage.show();
     }
 
+    public void switchtouserMessageScene(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("message.fxml"));
+        Parent root = fxmlLoader.load();
+        Traveler_Message_Controller us = fxmlLoader.getController();
+        us.setWelcome(s);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+        us.initialize();
+    }
+
     public void switchtouserdashboardScene(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("user_dashboard.fxml"));
         Parent root = fxmlLoader.load();
@@ -71,6 +84,18 @@ public class Traveler_Booking_Controller {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("user_Booking.fxml"));
         Parent root = fxmlLoader.load();
         UserWelcomeDashboard us = fxmlLoader.getController();
+        us.setWelcome(s);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    public void switchtouserPlanningScene(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("traveler_planning.fxml"));
+        Parent root = fxmlLoader.load();
+        Traveler_Planning_Controller us = fxmlLoader.getController();
         us.setWelcome(s);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

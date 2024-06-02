@@ -26,24 +26,29 @@ public class Admin_Dashboard_Controller {
     @FXML
     private Label total_user,total_service_provider;
 
-    public void switchtoAdminSigninScene(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("admin_login.fxml"));
+    public void switchtoAdminSigninScene(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("admin_login.fxml"));
+        Parent root = fxmlLoader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
     }
-    public void switchtoAdmintravelerScene(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("admin_traveler_dashboard.fxml"));
+    public void switchtoAdminproviderScene(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("admin_provider_dashboard.fxml"));
+        Parent root = fxmlLoader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
     }
-    public void switchtoAdminproviderScene(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("admin_provider_dashboard.fxml"));
+    public void switchtoAdminMessagescene(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("admin_message.fxml"));
+        Parent root = fxmlLoader.load();
+        Admin_Message_Controller us = fxmlLoader.getController();
+        us.initialize();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -51,6 +56,79 @@ public class Admin_Dashboard_Controller {
         stage.show();
     }
 
+    public void switchtoAdminAddScene(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("admin_ADD_place.fxml"));
+        Parent root = fxmlLoader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    public void switchtoAdmintravelerScene(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("admin_traveler_dashboard.fxml"));
+        Parent root = fxmlLoader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+    /*public void switchtoAdminSigninScene(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("admin_login.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }*/
+    /*public void switchtoAdmintravelerScene(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("admin_traveler_dashboard.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }*/
+/*
+    public void switchtoAdminAddScene(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("admin_ADD_place.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }*/
+    /*public void switchtoAdminproviderScene(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("admin_provider_dashboard.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }*/
+    /*public void switchtoAdminMessagescene(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("admin_message.fxml"));
+        Parent root = fxmlLoader.load();
+        Admin_Message_Controller adc = fxmlLoader.getController();
+        adc.initialize();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }*/
+    /*public void switchtoAdminMessagescene(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("admin_message.fxml"));
+        Parent root = fxmlLoader.load();
+        Admin_Message_Controller us = fxmlLoader.getController();
+        us.initialize();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }*/
     public void initialize() {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();

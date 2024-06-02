@@ -59,6 +59,22 @@ public class HotelWelcomeDashboard {
         hotel_name.setWelcome(s);
         stage.show();
     }
+
+    @FXML
+    public void switchtoHotelmessageScene(ActionEvent event) throws IOException, SQLException {
+        //Parent root = FXMLLoader.load(getClass().getResource("user_dashboard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("service_message.fxml"));
+        Parent root = fxmlLoader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        Service_Message_Controller hotel_name = fxmlLoader.getController();
+        hotel_name.setWelcome(s);
+        hotel_name.initialize();
+        stage.show();
+    }
+
     public void Showing_Numbers() {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();

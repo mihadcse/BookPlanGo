@@ -21,12 +21,12 @@
          </font>
       </Label>
       <PasswordField fx:id="service_pass_Text" layoutX="235.0" layoutY="197.0" prefHeight="25.0" prefWidth="195.0" promptText="Password" style="-fx-border-color: #138d75;" />
-      <Button fx:id="login_button" layoutX="151.0" layoutY="248.0" mnemonicParsing="false" onAction="#serviceonloginButtonclick" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: #d1f2eb;" text="Login" textFill="#138d75">
+      <Button fx:id="login_button" layoutX="151.0" layoutY="248.0" mnemonicParsing="false" onAction="#serviceonloginButtonclick" prefHeight="30.0" prefWidth="175.0" text="Login" textFill="#138d75">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="signup_button" layoutX="150.0" layoutY="345.0" mnemonicParsing="false" onAction="#switchtoserviceSignupScene" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: #d1f2eb;" text="Sign up" textFill="#138d75">
+      <Button fx:id="signup_button" layoutX="150.0" layoutY="345.0" mnemonicParsing="false" onAction="#switchtoserviceSignupScene" prefHeight="30.0" prefWidth="175.0" text="Sign up" textFill="#138d75">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

@@ -4,8 +4,8 @@
 }
 
   .button:hover {
-  -fx-background-color: #138D75;
-  -fx-text-fill: #003380 ; //  #D1F2EB  #1a0000
+  -fx-background-color: #99e6ff;
+  -fx-text-fill: #001a0d ; //  #D1F2EB  #1a0000
   -fx-transition: 0.7s;
   }
 /*
@@ -35,3 +35,13 @@
     -fx-background-insets: 0, 0 0 1 0;
     -fx-padding: 0.0em;
 }*/
+
+/* Change the background color of the entire scene */
+.pane-background {
+    -fx-background-color: lightblue;
+}
+
+/* Change the background color of a specific pane */
+.pane-background {
+    -fx-background-color: lightgreen;
+}

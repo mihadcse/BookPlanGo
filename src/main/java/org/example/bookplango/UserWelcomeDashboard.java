@@ -18,6 +18,8 @@ public class UserWelcomeDashboard {
     @FXML
     public Label username_label_dashboard;
     String s = "";
+    @FXML
+    public Label BookingCondirm;
 
 
     public void setWelcome(String name)
@@ -80,16 +82,38 @@ public class UserWelcomeDashboard {
     public void switchtouserBooking_CarScene(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("user_Booking_car.fxml"));
         Parent root = fxmlLoader.load();
-        Traveler_Booking_Controller user_name_dashboard_control = fxmlLoader.getController();
-        user_name_dashboard_control.setWelcome(s);
         //setWelcome(s);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
+        Traveler_Car_Searching travelerCarSearching=fxmlLoader.getController();
+        travelerCarSearching.setData(s);
         stage.show();
-        user_name_dashboard_control.initialize_car();
     }
 
+    public void switchtouserPlanningScene(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("traveler_planning.fxml"));
+        Parent root = fxmlLoader.load();
+        Traveler_Planning_Controller us = fxmlLoader.getController();
+        us.setWelcome(s);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    public void switchtouserMessageScene(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("message.fxml"));
+        Parent root = fxmlLoader.load();
+        Traveler_Message_Controller us = fxmlLoader.getController();
+        us.setWelcome(s);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
 
 }

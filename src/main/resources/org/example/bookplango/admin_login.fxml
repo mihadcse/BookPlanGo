@@ -21,7 +21,7 @@
          </font>
       </Label>
       <PasswordField fx:id="admin_pass" layoutX="237.0" layoutY="247.0" prefHeight="25.0" prefWidth="195.0" promptText="Password" style="-fx-border-color: #138d75;" />
-      <Button fx:id="login_button" layoutX="150.0" layoutY="335.0" mnemonicParsing="false" onAction="#adminloginbuttonclick" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: #e6e6ff;" text="Login" textFill="#2e2eda">
+      <Button fx:id="login_button" layoutX="150.0" layoutY="335.0" mnemonicParsing="false" onAction="#adminloginbuttonclick" prefHeight="30.0" prefWidth="175.0" text="Login" textFill="#2e2eda">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

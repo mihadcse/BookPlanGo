@@ -126,6 +126,22 @@ public class Hotel_room_add_controller {
         hotel_name.setWelcome(S_ID);
         stage.show();
     }
+
+    @FXML
+    public void switchtoHotelmessageScene(ActionEvent event) throws IOException, SQLException {
+        //Parent root = FXMLLoader.load(getClass().getResource("user_dashboard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("service_message.fxml"));
+        Parent root = fxmlLoader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        Service_Message_Controller hotel_name = fxmlLoader.getController();
+        hotel_name.setWelcome(S_ID);
+        hotel_name.initialize();
+        stage.show();
+    }
+
     @FXML
     public void back(ActionEvent event) throws SQLException, IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Hotel_welcomepage.fxml"));

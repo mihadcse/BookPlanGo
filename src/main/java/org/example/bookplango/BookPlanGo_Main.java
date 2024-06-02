@@ -14,6 +14,7 @@ public class BookPlanGo_Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(BookPlanGo_Main.class.getResource("selectuser.fxml"));
         Parent root = FXMLLoader.load(getClass().getResource("selectuser.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 475, 404);
+
         stage.setTitle("BookPlanGo!");
         stage.setResizable(false);
         stage.setScene(scene);
@@ -25,3 +26,5 @@ public class BookPlanGo_Main extends Application {
 }
 
 // dBase@BookPlanGo24
+
+

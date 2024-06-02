@@ -32,7 +32,7 @@
             <Font name="Calibri Bold" size="23.0" />
          </font>
       </Label>
-      <Button alignment="CENTER" layoutX="187.0" layoutY="321.0" mnemonicParsing="false" onAction="#serviceonsignupButtonclick" prefHeight="27.0" prefWidth="101.0" style="-fx-background-color: #d1f2eb;" text="Sign up" textFill="#138d75">
+      <Button alignment="CENTER" layoutX="187.0" layoutY="321.0" mnemonicParsing="false" onAction="#serviceonsignupButtonclick" prefHeight="27.0" prefWidth="101.0" text="Sign up" textFill="#138d75">
          <font>
             <Font name="Calibri Bold" size="18.0" />
          </font>
@@ -54,12 +54,12 @@
          </font>
       </Label>
       <TextField fx:id="service_ID_Text" layoutX="215.0" layoutY="120.0" prefHeight="27.0" prefWidth="196.0" promptText="ID" style="-fx-border-color: #138d75;" />
-      <Button alignment="CENTER" layoutX="122.0" layoutY="69.0" mnemonicParsing="false" onAction="#hotel_click_signup" prefHeight="34.0" prefWidth="69.0" style="-fx-background-color: #d1f2eb;" text="Hotel" textFill="#138d75">
+      <Button alignment="CENTER" layoutX="122.0" layoutY="69.0" mnemonicParsing="false" onAction="#hotel_click_signup" prefHeight="34.0" prefWidth="69.0" text="Hotel" textFill="#138d75">
          <font>
             <Font name="Calibri Bold" size="18.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="280.0" layoutY="69.0" mnemonicParsing="false" onAction="#car_click_signup" prefHeight="34.0" prefWidth="69.0" style="-fx-background-color: #d1f2eb;" text="Car" textFill="#138d75">
+      <Button alignment="CENTER" layoutX="280.0" layoutY="69.0" mnemonicParsing="false" onAction="#car_click_signup" prefHeight="34.0" prefWidth="69.0" text="Car" textFill="#138d75">
          <font>
             <Font name="Calibri Bold" size="18.0" />
          </font>

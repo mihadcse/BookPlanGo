@@ -62,22 +62,27 @@
             <Font name="Calibri Bold" size="30.0" />
          </font>
       </Label>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-20.0" layoutY="184.0" mnemonicParsing="false" onAction="#switchtoAdmintravelerScene" prefHeight="27.0" prefWidth="200.0" style="-fx-background-color: #d1f2eb;" text="Traveler" textFill="#8a11c6">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-20.0" layoutY="184.0" mnemonicParsing="false" onAction="#switchtoAdmintravelerScene" prefHeight="27.0" prefWidth="200.0" text="Traveler" textFill="#8a11c6">
          <font>
             <Font name="Calibri Bold" size="25.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-42.0" layoutY="253.0" mnemonicParsing="false" onAction="#switchtoAdminproviderScene" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: #d1f2eb;" text="Provider" textFill="#8a11c6">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-42.0" layoutY="253.0" mnemonicParsing="false" onAction="#switchtoAdminproviderScene" prefHeight="28.0" prefWidth="200.0" text="Provider" textFill="#8a11c6">
          <font>
             <Font name="Calibri Bold" size="25.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-38.0" layoutY="391.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="200.0" style="-fx-background-color: #d1f2eb;" text="Messages" textFill="#8a11c6">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-40.0" layoutY="379.0" mnemonicParsing="false" onAction="#switchtoAdminMessagescene" prefHeight="13.0" prefWidth="200.0" text="Messages" textFill="#8a11c6">
          <font>
             <Font name="Calibri Bold" size="25.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-40.0" layoutY="318.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="200.0" style="-fx-background-color: #d1f2eb;" text="Approve" textFill="#8a11c6">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-40.0" layoutY="318.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="200.0" text="Approve" textFill="#8a11c6">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-40.0" layoutY="437.0" mnemonicParsing="false" onAction="#switchtoAdminAddScene" prefHeight="27.0" prefWidth="200.0" text="Add Place" textFill="#8a11c6">
          <font>
             <Font name="Calibri Bold" size="25.0" />
          </font>

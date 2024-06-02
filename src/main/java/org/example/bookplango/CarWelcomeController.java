@@ -14,6 +14,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 
 public class CarWelcomeController {
     @FXML
@@ -32,10 +33,18 @@ public class CarWelcomeController {
 
     @FXML
     public void setData(String s) throws SQLException {
+        String date= String.valueOf(LocalDate.now());
+        System.out.println(date);
         S_ID=s;
         ID.setText(s);
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
+        Statement statement0= connectDB.createStatement();
+        statement0.executeUpdate("UPDATE car_details SET carStatus = 'Available' WHERE LiscenceNum  in (select CarLicsence from carbookdetails where BookingDate!='"+date+"');");
+        Statement statement1= connectDB.createStatement();
+        statement1.executeUpdate("UPDATE car_details SET carStatus = 'Booked' WHERE LiscenceNum  in (select CarLicsence from carbookdetails where BookingDate='"+date+"');");
+        Statement statement2= connectDB.createStatement();
+        statement2.executeUpdate("DELETE FROM carbookdetails WHERE BookingDate<'"+date+"';");
         int total=-1,booked=-1,available=-1,unavailable=-1;
         Statement statement= connectDB.createStatement();
         ResultSet resultSet=statement.executeQuery("SELECT count(*) as total from car_details where carID="+S_ID+";");
@@ -88,6 +97,7 @@ public class CarWelcomeController {
         carAddVehicle.setData(S_ID);
         stage.show();
     }
+    @FXML
     public void carDashboard(ActionEvent event) throws IOException, SQLException {
         FXMLLoader fxmlLoader=new FXMLLoader(BookPlanGo_Main.class.getResource("car_dashboard.fxml"));
         //Parent root = FXMLLoader.load(getClass().getResource("service_edit_profile.fxml"));
@@ -99,5 +109,16 @@ public class CarWelcomeController {
         carDashboard.setData(S_ID);
         stage.show();
     }
-
+    @FXML
+    public void Booking(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader fxmlLoader=new FXMLLoader(BookPlanGo_Main.class.getResource("car_manager_see_booking.fxml"));
+        //Parent root = FXMLLoader.load(getClass().getResource("service_edit_profile.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.setResizable(false);
+        CarManagerSeeBooking carManagerSeeBooking=fxmlLoader.getController();
+        carManagerSeeBooking.setData(S_ID);
+        stage.show();
+    }
 }

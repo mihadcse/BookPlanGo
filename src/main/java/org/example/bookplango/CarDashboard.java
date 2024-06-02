@@ -66,11 +66,13 @@ public class CarDashboard {
                 if(carAvailability[i].equals("Available")){
                     MakeUnavailable.setText("Make Unavailable");
                     MakeUnavailable.setVisible(true);
+                    MakeUnavailable.setDisable(false);
                 }else if(carAvailability[i].equals("Unavailable")){
                     MakeUnavailable.setText("Make Available");
+                    MakeUnavailable.setDisable(false);
                     MakeUnavailable.setVisible(true);
-                }else{
-                    MakeUnavailable.setVisible(false);
+                }else if(carAvailability[i].equals("Booked")){
+                    MakeUnavailable.setDisable(true);
                 }
                 break;
             }
@@ -94,6 +96,7 @@ public class CarDashboard {
         S_ID=s;
         ID.setText(s);
         MakeUnavailable.setVisible(false);
+        MakeUnavailable.setDisable(false);
         carLicsenceLabel.setText("");
         carDataObservableList.clear();
         DatabaseConnection connectNow = new DatabaseConnection();
@@ -183,6 +186,18 @@ public class CarDashboard {
         stage.setResizable(false);
         CarWelcomeController carWelcomeController=fxmlLoader.getController();
         carWelcomeController.setData(S_ID);
+        stage.show();
+    }
+    @FXML
+    public void Booking(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader fxmlLoader=new FXMLLoader(BookPlanGo_Main.class.getResource("car_manager_see_booking.fxml"));
+        //Parent root = FXMLLoader.load(getClass().getResource("service_edit_profile.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.setResizable(false);
+        CarManagerSeeBooking carManagerSeeBooking=fxmlLoader.getController();
+        carManagerSeeBooking.setData(S_ID);
         stage.show();
     }
 
