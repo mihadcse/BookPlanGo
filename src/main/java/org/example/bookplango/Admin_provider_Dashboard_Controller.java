@@ -127,6 +127,18 @@ public class Admin_provider_Dashboard_Controller {
         stage.show();
     }
 
+    public void switchtoAdminApprovalScene(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("admin_approval.fxml"));
+        Parent root = fxmlLoader.load();
+        Admin_Approval_Controller ap = fxmlLoader.getController();
+        ap.initialize();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+
     public void initialize() {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
@@ -146,7 +158,7 @@ public class Admin_provider_Dashboard_Controller {
             e.printStackTrace();
         }
 
-        String adminproviderTableViewquery = "Select service_id,service_name,service_phone_no,service_type from serviceprovider_info";
+        String adminproviderTableViewquery = "Select service_id,service_name,service_phone_no,service_type from serviceprovider_info where service_approval = 'Approved'";
         try{
             Statement statement2 = connectDB.createStatement();
             ResultSet queryOutput2 = statement2.executeQuery (adminproviderTableViewquery);

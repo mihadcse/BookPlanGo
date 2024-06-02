@@ -119,7 +119,7 @@ public class Traveler_Booking_Controller {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
 
-        String travelerTableViewquery = "Select serviceprovider_info.service_name,serviceprovider_info.service_location,serviceprovider_info.service_phone_no from serviceprovider_info where service_type = 'Hotel'";
+        String travelerTableViewquery = "Select serviceprovider_info.service_name,serviceprovider_info.service_location,serviceprovider_info.service_phone_no from serviceprovider_info where service_type = 'Hotel' and service_approval = 'Approved'";
         try{
             Statement statement = connectDB.createStatement();
             ResultSet queryOutput = statement.executeQuery (travelerTableViewquery);
@@ -171,7 +171,7 @@ public class Traveler_Booking_Controller {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
 
-        String travelerTableViewquery = "Select serviceprovider_info.service_name,serviceprovider_info.service_location,serviceprovider_info.service_phone_no from serviceprovider_info where service_type = 'Car'";
+        String travelerTableViewquery = "Select serviceprovider_info.service_name,serviceprovider_info.service_location,serviceprovider_info.service_phone_no from serviceprovider_info where service_type = 'Car' and service_type = 'Approved'";
         try{
             Statement statement = connectDB.createStatement();
             ResultSet queryOutput = statement.executeQuery (travelerTableViewquery);

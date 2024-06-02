@@ -4,7 +4,7 @@
 }
 
   .button:hover {
-  -fx-background-color: #99e6ff;
+  -fx-background-color: #ABD6F1 ;//#99e6ff;
   -fx-text-fill: #001a0d ; //  #D1F2EB  #1a0000
   -fx-transition: 0.7s;
   }

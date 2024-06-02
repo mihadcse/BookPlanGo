@@ -16,10 +16,7 @@ import java.io.IOException;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 
 public class Service_Edit_Profile_Controller  {
@@ -30,7 +27,7 @@ public class Service_Edit_Profile_Controller  {
     @FXML
     private Button Cancel;
     @FXML
-    private TextField service_name;
+    private TextField service_name,image_path;
     @FXML
     private TextField PhoneNumber;
     @FXML
@@ -220,4 +217,55 @@ public class Service_Edit_Profile_Controller  {
             return null;
         }
     }
+
+    /*public void add_image_path_click(ActionEvent event) throws SQLException {
+        DatabaseConnection connectNew = new DatabaseConnection();
+        Connection connectDB = connectNew.getConnection();
+        Statement statement1=connectDB.createStatement();
+
+        String update_image = "UPDATE `sys`.`serviceprovider_info`\n" +
+                "SET\n" +
+                "`service_image` = ?\n" +
+                "WHERE `service_id` = ?";
+
+        PreparedStatement pstmt = connectDB.prepareStatement(update_image);
+        // Setting values using pstmt.setString()
+        pstmt.setString(1, image_path.getText());
+        pstmt.setString(2, S_ID);
+        Integer res = statement1.executeUpdate(update_image);
+        if(res>0)
+        {
+            System.out.println("Image Added");
+            notification.setText("Image Added");
+        }
+    }*/
+    public void add_image_path_click() throws SQLException {
+        // Database connection similar to addPlace()
+        DatabaseConnection connectNew = new DatabaseConnection();
+        Connection connectDB = connectNew.getConnection();
+
+        // PreparedStatement for update with placeholders
+        String update_image = "UPDATE `sys`.`serviceprovider_info`\n" +
+                "SET\n" +
+                "`service_image` = ?\n" +
+                "WHERE `service_id` = ?";
+
+        PreparedStatement pstmt = connectDB.prepareStatement(update_image);
+
+        // Setting values using pstmt.setString()
+        pstmt.setString(1, image_path.getText());
+        pstmt.setString(2, S_ID);
+
+        // Executing the update
+        Integer res = pstmt.executeUpdate();
+        if (res > 0) {
+            System.out.println("Image Added");
+            notification.setText("Image Added");
+        }
+
+        // Close the connection (recommended practice)
+        pstmt.close();
+        connectDB.close();
+    }
+
 }

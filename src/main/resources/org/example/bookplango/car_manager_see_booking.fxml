@@ -7,16 +7,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="404.0" prefWidth="475.0" style="-fx-background-color: #00cc99; -fx-border-width: 2px;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.CarManagerSeeBooking">
+<AnchorPane prefHeight="404.0" prefWidth="475.0" style="-fx-background-color: #ABD6F1; -fx-border-width: 2px;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.CarManagerSeeBooking">
     <children>
-        <AnchorPane layoutX="191.0" prefHeight="511.0" prefWidth="524.0" style="-fx-background-color: #d1f2eb; -fx-border-color: #29654f; -fx-border-width: 2px;">
+        <AnchorPane layoutX="191.0" prefHeight="511.0" prefWidth="524.0" style="-fx-background-color: #EBF5FB; -fx-border-color: #29654f; -fx-border-width: 2px;">
             <children>
-                <Label alignment="CENTER" layoutX="200.0" layoutY="30.0" prefHeight="29.0" prefWidth="154.0" text="HELLO," textFill="#138d75">
+                <Label alignment="CENTER" layoutX="200.0" layoutY="30.0" prefHeight="29.0" prefWidth="154.0" text="HELLO," textFill="#3498db">
                     <font>
                         <Font name="Calibri Bold" size="31.0" />
                     </font>
                 </Label>
-                <Label fx:id="ID" alignment="CENTER" layoutX="203.0" layoutY="68.0" prefHeight="36.0" prefWidth="154.0" textFill="#0c1fcc">
+                <Label fx:id="ID" alignment="CENTER" layoutX="203.0" layoutY="68.0" prefHeight="36.0" prefWidth="154.0" textFill="#3498db">
                     <font>
                         <Font name="Calibri Bold" size="29.0" />
                     </font>
@@ -31,7 +31,7 @@
                 </TableView>
             </children>
         </AnchorPane>
-        <Button alignment="CENTER" layoutX="20.0" layoutY="21.0" mnemonicParsing="false" onAction="#back" prefHeight="21.0" prefWidth="50.0" style="-fx-background-color: #a61247;" text="back" textFill="#fffafa">
+        <Button alignment="CENTER" layoutX="20.0" layoutY="21.0" mnemonicParsing="false" onAction="#back" prefHeight="21.0" prefWidth="50.0" style="-fx-background-color: #a61247;" text="Back" textFill="#fffafa">
             <font>
                 <Font name="Calibri Bold" size="11.0" />
             </font>
@@ -41,32 +41,32 @@
                 <Font name="Calibri Bold" size="30.0" />
             </font>
         </Label>
-        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-37.0" layoutY="119.0" mnemonicParsing="false" onAction="#carDashboard" prefHeight="53.0" prefWidth="200.0" text="Dashboard" textFill="#138d75">
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-37.0" layoutY="119.0" mnemonicParsing="false" onAction="#carDashboard" prefHeight="53.0" prefWidth="200.0" text="Dashboard" textFill="#3498db">
             <font>
                 <Font name="Calibri Bold" size="25.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-36.0" layoutY="310.0" mnemonicParsing="false" onAction="#switchtoserviceUpdateProfile" prefHeight="27.0" prefWidth="200.0" text="Edit Profile" textFill="#138d75">
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-36.0" layoutY="310.0" mnemonicParsing="false" onAction="#switchtoserviceUpdateProfile" prefHeight="27.0" prefWidth="200.0" text="Edit Profile" textFill="#3498db">
             <font>
                 <Font name="Calibri Bold" size="25.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-36.0" layoutY="372.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="200.0" text="Messages" textFill="#138d75">
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-36.0" layoutY="372.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="200.0" text="Messages" textFill="#3498db">
             <font>
                 <Font name="Calibri Bold" size="25.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-35.0" layoutY="185.0" mnemonicParsing="false" onAction="#AddVehicle" prefHeight="46.0" prefWidth="200.0" text="Add Vehicle" textFill="#138d75">
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-35.0" layoutY="185.0" mnemonicParsing="false" onAction="#AddVehicle" prefHeight="46.0" prefWidth="200.0" text="Add Vehicle" textFill="#3498db">
             <font>
                 <Font name="Calibri Bold" size="23.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-22.0" layoutY="244.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="200.0" text="Booking" textFill="#138d75">
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-22.0" layoutY="249.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="200.0" text="Booking" textFill="#3498db">
             <font>
                 <Font name="Calibri Bold" size="25.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-36.0" layoutY="432.0" mnemonicParsing="false" onAction="#switchtoserviceSigninScene" prefHeight="13.0" prefWidth="200.0" text="Log out" textFill="#138d75">
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-36.0" layoutY="432.0" mnemonicParsing="false" onAction="#switchtoserviceSigninScene" prefHeight="13.0" prefWidth="200.0" text="Log out" textFill="#3498db">
             <font>
                 <Font name="Calibri Bold" size="25.0" />
             </font>

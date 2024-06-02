@@ -9,21 +9,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="404.0" prefWidth="475.0" style="-fx-background-color: #75d7c4; -fx-border-width: 2px;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.Traveler_Car_Dashboard_Controller">
+<AnchorPane prefHeight="404.0" prefWidth="475.0" style="-fx-background-color: #ABD6F1; -fx-border-width: 2px;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bookplango.Traveler_Car_Dashboard_Controller">
    <children>
-      <AnchorPane layoutX="185.0" prefHeight="511.0" prefWidth="517.0" style="-fx-background-color: #d1f2eb; -fx-border-color: #29654f; -fx-border-width: 2px;">
+      <AnchorPane layoutX="185.0" prefHeight="511.0" prefWidth="517.0" style="-fx-background-color: #EBF5FB; -fx-border-color: #29654f; -fx-border-width: 2px;">
          <children>
-            <Label alignment="CENTER" layoutX="184.0" layoutY="14.0" prefHeight="29.0" prefWidth="154.0" text="HELLO," textFill="#138d75">
+            <Label alignment="CENTER" layoutX="184.0" layoutY="14.0" prefHeight="29.0" prefWidth="154.0" text="HELLO," textFill="#3498db">
                <font>
                   <Font name="Calibri Bold" size="31.0" />
                </font>
             </Label>
-            <Label fx:id="username_label_dashboard" alignment="CENTER" layoutX="189.0" layoutY="58.0" prefHeight="36.0" prefWidth="144.0" textFill="#0d1ad0">
+            <Label fx:id="username_label_dashboard" alignment="CENTER" layoutX="189.0" layoutY="58.0" prefHeight="36.0" prefWidth="144.0" textFill="#3498db">
                <font>
                   <Font name="Calibri Bold" size="29.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="160.0" layoutY="94.0" prefHeight="36.0" prefWidth="200.0" text="Car Dashboard" textFill="#138d75">
+            <Label alignment="CENTER" layoutX="160.0" layoutY="94.0" prefHeight="36.0" prefWidth="200.0" text="Car Dashboard" textFill="#3498db">
                <font>
                   <Font name="Calibri Bold" size="31.0" />
                </font>
@@ -33,7 +33,7 @@
                   <Image url="@Bangladesh.jpg" />
                </image>
             </ImageView>
-            <TableView fx:id="travelerCarDashboardTableView" layoutX="7.0" layoutY="164.0" prefHeight="339.0" prefWidth="509.0" style="-fx-background-color: #d1f2eb; -fx-border-color: #75d7c4; -fx-border-width: 2px;">
+            <TableView fx:id="travelerCarDashboardTableView" layoutX="7.0" layoutY="164.0" prefHeight="339.0" prefWidth="509.0" style="-fx-background-color: #EBF5FB; -fx-border-color: #00bfff; -fx-border-width: 2px;">
                <columns>
                   <TableColumn fx:id="travelerCarIDTableColumn" editable="false" prefWidth="86.0" text="Service Id" />
                   <TableColumn fx:id="travelerCarLisenceTableColumn" editable="false" prefWidth="105.0" text="Car License" />
@@ -44,17 +44,17 @@
             </TableView>
          </children>
       </AnchorPane>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-18.0" layoutY="179.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="200.0" text="Dashboard" textFill="#138d75">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-18.0" layoutY="179.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="200.0" text="Dashboard" textFill="#3498db">
          <font>
             <Font name="Calibri Bold" size="25.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-45.0" layoutY="256.0" mnemonicParsing="false" onAction="#switchtouserBookingScene" prefHeight="27.0" prefWidth="200.0" text="Booking" textFill="#138d75">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-45.0" layoutY="256.0" mnemonicParsing="false" onAction="#switchtouserBookingScene" prefHeight="27.0" prefWidth="200.0" text="Booking" textFill="#3498db">
          <font>
             <Font name="Calibri Bold" size="25.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-45.0" layoutY="333.0" mnemonicParsing="false" onAction="#switchtouserPlanningScene" prefHeight="28.0" prefWidth="200.0" text="Gallery" textFill="#138d75">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-45.0" layoutY="333.0" mnemonicParsing="false" onAction="#switchtouserPlanningScene" prefHeight="28.0" prefWidth="200.0" text="Gallery" textFill="#3498db">
          <font>
             <Font name="Calibri Bold" size="25.0" />
          </font>
@@ -69,7 +69,7 @@
             <Font name="Calibri Bold" size="30.0" />
          </font>
       </Label>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-45.0" layoutY="403.0" mnemonicParsing="false" onAction="#switchtouserMessageScene" prefHeight="13.0" prefWidth="200.0" text="Messages" textFill="#138d75">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-45.0" layoutY="403.0" mnemonicParsing="false" onAction="#switchtouserMessageScene" prefHeight="13.0" prefWidth="200.0" text="Messages" textFill="#3498db">
          <font>
             <Font name="Calibri Bold" size="25.0" />
          </font>
